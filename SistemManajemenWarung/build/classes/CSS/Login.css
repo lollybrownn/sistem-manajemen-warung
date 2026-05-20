@@ -1,0 +1,52 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 20, 2026, 12:55:06 AM
+    Author     : ASUS
+*/
+
+.main-container {
+    -fx-background-color:#F6DBC0;
+}
+
+.loginSymbol-container {
+    -fx-alignment: center;
+    -fx-spacing:5px;
+}
+
+.symbol {
+    -fx-fill:#502D55;
+}
+
+.text {
+    -fx-text-fill: #935073;
+}
+
+.login-checkbox {
+    -fx-text-fill: #935073;
+}
+
+.login-button {
+    -fx-background-color: #502D55; 
+    
+    -fx-text-fill: #F8F4E9; 
+    
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.close {
+    -fx-fill:#502D55;
+    -fx-background-color: transparent;
+}
+.close:hover {
+    -fx-fill:#C62818;
+}
