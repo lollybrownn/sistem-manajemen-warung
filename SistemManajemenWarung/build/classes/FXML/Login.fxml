@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
    <children>
       <AnchorPane prefHeight="550.0" prefWidth="400.0" styleClass="main-container" stylesheets="@../CSS/Login.css">
          <children>
-            <VBox layoutX="164.0" layoutY="48.0" prefHeight="84.0" prefWidth="73.0" styleClass="loginSymbol-container">
+            <VBox layoutX="164.0" layoutY="51.0" prefHeight="84.0" prefWidth="73.0" styleClass="loginSymbol-container">
                <children>
                   <FontAwesomeIconView glyphName="USER" size="5em" styleClass="symbol" text="" />
                   <Label styleClass="text" text="LOGIN">
@@ -27,13 +27,13 @@
                   </Label>
                </children>
             </VBox>
-            <TextField layoutX="96.0" layoutY="234.0" prefHeight="25.0" prefWidth="209.0" promptText="Username" />
-            <PasswordField layoutX="96.0" layoutY="277.0" prefHeight="25.0" prefWidth="209.0" promptText="Password" />
-            <TextField layoutX="96.0" layoutY="277.0" prefHeight="25.0" prefWidth="209.0" promptText="Password" visible="false" />
-            <Button layoutX="96.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="209.0" styleClass="login-button" text="Button" />
-            <CheckBox layoutX="96.0" layoutY="313.0" mnemonicParsing="false" styleClass="login-checkbox" text="Show Password" />
-            <ComboBox layoutX="125.0" layoutY="173.0" prefWidth="150.0" promptText="Login As" visibleRowCount="2" />
-            <HBox layoutX="75.0" layoutY="443.0" prefHeight="54.0" prefWidth="251.0" styleClass="loginSymbol-container">
+            <TextField layoutX="96.0" layoutY="237.0" prefHeight="25.0" prefWidth="209.0" promptText="Username" styleClass="text-field" />
+            <PasswordField layoutX="96.0" layoutY="280.0" prefHeight="25.0" prefWidth="209.0" promptText="Password" styleClass="text-field" />
+            <TextField layoutX="96.0" layoutY="280.0" prefHeight="25.0" prefWidth="209.0" promptText="Password" visible="false" />
+            <Button fx:id="btnLogin" layoutX="96.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="209.0" styleClass="login-button" text="LOGIN" />
+            <CheckBox layoutX="96.0" layoutY="316.0" mnemonicParsing="false" styleClass="login-checkbox" text="Show Password" />
+            <ComboBox layoutX="125.0" layoutY="176.0" prefWidth="150.0" promptText="Login As" styleClass="combobox" visibleRowCount="2" />
+            <HBox layoutX="75.0" layoutY="446.0" prefHeight="54.0" prefWidth="251.0" styleClass="loginSymbol-container">
                <children>
                   <FontAwesomeIconView glyphName="CUTLERY" size="2em" styleClass="symbol" />
                   <Label styleClass="text" text="Sistem Manajemen Warung">
@@ -43,7 +43,20 @@
                   </Label>
                </children>
             </HBox>
-            <AnchorPane layoutX="353.0" layoutY="11.0" prefHeight="34.0" prefWidth="38.0" />
+            <HBox layoutX="329.0" layoutY="1.0" prefHeight="26.0" prefWidth="84.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btnMinimize" mnemonicParsing="false" prefHeight="24.0" prefWidth="43.0" styleClass="close-btn">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MINUS" styleClass="close-btn" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnExit" mnemonicParsing="false" onAction="#btnExit" prefHeight="24.0" prefWidth="43.0" styleClass="close-btn">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TIMES" styleClass="close-btn" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </children>

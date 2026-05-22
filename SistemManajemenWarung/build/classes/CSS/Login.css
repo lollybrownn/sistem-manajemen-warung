@@ -9,6 +9,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .main-container {
     -fx-background-color:#F6DBC0;
+    -fx-border-radius:5px;
 }
 
 .loginSymbol-container {
@@ -24,8 +25,39 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-text-fill: #935073;
 }
 
+/* 1. Mengubah warna teks Label Checkbox */
 .login-checkbox {
-    -fx-text-fill: #935073;
+    -fx-text-fill: #935073; /* Warna ungu lo */
+}
+
+/* 2. Mengubah tampilan KOTAK Checkbox (Kondisi Normal) */
+.login-checkbox .box {
+    -fx-background-color: #FFFFFF;    /* Latar belakang kotak jadi putih bersih */
+    -fx-background-insets: 0;
+    -fx-background-radius: 3;         /* Melengkung sedikit di sudutnya */
+    -fx-border-color: #A0A0A0;        /* Border abu-abu tipis pas idle */
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+}
+
+/* 3. Menghilangkan BIRU NEON pas Checkbox diklik/difokuskan */
+.login-checkbox:focused .box {
+    -fx-border-color: #935073;        /* Border kotak berubah jadi ungu khas lo */
+    -fx-border-width: 1.5;            /* Sedikit lebih tegas */
+}
+
+/* 4. Tampilan pas Checkbox DICENTANG (Selected) */
+.login-checkbox:selected .box {
+    -fx-background-color: #935073;    /* Kotak berubah jadi ungu penuh */
+    -fx-border-color: #935073;
+}
+
+/* 5. MEMPERBAIKI TANDA CENTANG (The Mark) */
+.login-checkbox:selected .mark {
+    -fx-background-color: #F8F4E9;    /* Tetap warna cream lo */
+    
+    /* Ganti pakai kode SVG centang yang ini, bro: */
+    -fx-shape: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"; 
 }
 
 .login-button {
@@ -43,10 +75,73 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-scale-y: 1.05;
 }
 
-.close {
+.close-btn {
     -fx-fill:#502D55;
     -fx-background-color: transparent;
 }
-.close:hover {
-    -fx-fill:#C62818;
+.close-btn:hover {
+    -fx-background-color: #F8F4E9; /* Latar belakang jadi MERAH */
+}
+
+.combo-box {
+    -fx-background-color:#935073;
+    -fx-border-radius:5px;
+}
+
+.combo-box .cell {
+    -fx-text-fill: #F8F4E9;        /* Warna cream tulisan "Login As" */
+}
+
+/* 3. BONUS: Biar tombol panah di kanan gak warna abu-abu bawaan windows */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* 4. BONUS: Biar segitiga panah kecilnya sewarna dengan teks cream lo */
+.combo-box .arrow {
+    -fx-background-color: #F8F4E9;
+}
+
+/* Mengubah background list pilihan (kotak dropdown-nya) saat diklik */
+.combo-box .list-view {
+    -fx-background-color: #935073;
+    -fx-border-color: #F8F4E9;
+    -fx-border-width: 1px;
+}
+
+/* Warna teks di dalam list pilihan (kondisi normal) */
+.combo-box .list-cell {
+    -fx-text-fill: #F8F4E9;
+    -fx-background-color: transparent;
+}
+
+/* KUNCINYA DI SINI: Efek pas di-hover, di-select, atau lagi di-focus */
+.combo-box .list-cell:hover, 
+.combo-box .list-cell:focused, 
+.combo-box .list-cell:selected {
+    -fx-background-color: #F8F4E9; /* Background balik jadi cream */
+    -fx-text-fill: #935073;        /* Teks berubah jadi ungu */
+}
+
+/* 1. Kondisi Normal (Sebelum diklik) */
+.text-field {
+    -fx-background-color: #FFFFFF;    /* Latar belakang putih bersih */
+    -fx-background-insets: 0;
+    -fx-background-radius: 5px;       /* Sudut melengkung halus (sama kayak ComboBox lo) */
+    -fx-border-color: #A0A0A0;        /* Border abu-abu tipis saat posisi idle */
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding-top: 8px;
+    -fx-padding-bottom: 8px;
+    -fx-padding-left: 10px;
+    -fx-padding-right: 10px;
+    -fx-text-fill: #502D55;           /* Warna teks pas lo ngetik jadi ungu tua */
+    -fx-prompt-text-fill: #A0A0A0;    /* Warna tulisan bayangan "Username" / "Password" */
+}
+
+/* 2. KUNCINYA: Kondisi Pas DIKLIK / FOCUSED (Menghilangkan Biru Neon) */
+.text-field:focused {
+    -fx-background-color: #FFFFFF;    /* Tetap putih */
+    -fx-border-color: #935073;        /* Border berubah jadi UNGU KHAS LO */
+    -fx-border-width: 1.5px;          /* Dibikin sedikit tebal biar tegas kalau lagi aktif */
 }
