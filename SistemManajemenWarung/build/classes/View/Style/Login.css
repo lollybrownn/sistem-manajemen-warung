@@ -1,0 +1,135 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 27, 2026, 10:13:00 PM
+    Author     : ASUS
+*/
+
+.left-form {
+    -fx-background-color:#03A6A1;
+}
+
+.logo-left {
+    -fx-fill: #FFE3BB;
+}
+
+.text-left{
+    -fx-text-fill:#FFE3BB;
+}
+
+.right-form {
+    -fx-background-color:#FFE3BB;
+}
+
+.text-right{
+    -fx-text-fill:#03A6A1;
+}
+
+.logo-right {
+    -fx-fill:#03A6A1;
+}
+
+.field {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-text-fill:#03A6A1;
+    -fx-padding: 10;
+}
+
+.field:focus {
+    -fx-border-color: #03A6A1;
+}
+
+.button {
+    -fx-background-radius: 5px;
+    -fx-text-fill: #FFE3BB;
+    -fx-background-color: #03A6A1;
+}
+
+.check-box .box {
+    -fx-background-color: white;             
+    -fx-border-color: #03A6A1;               
+    -fx-border-width: 2px;                   
+    -fx-border-radius: 3px;                  
+    -fx-background-radius: 3px;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #03A6A1;       
+}
+
+
+.check-box:selected .box {
+    -fx-background-color: #03A6A1;          
+    -fx-border-color: #03A6A1;
+}
+
+
+.check-box .mark {
+    -fx-background-color: white;             
+    -fx-shape: "M0,5 L3,8 L10,1 L9,0 L3,6 L1,4 Z"; 
+}
+
+.combo-box {
+    -fx-background-color: #FFE3BB;          /* Warna secondary (latar belakang) */
+    -fx-border-color: #03A6A1;              /* Warna primary (garis tepi) */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 2px;
+    -fx-font-size: 14px;
+}
+
+/* 2. Gaya Saat Combo Box Di-hover atau Di-klik (Focused) */
+.combo-box:hover, .combo-box:focused {
+    -fx-border-color: #02827e;              /* Primary lebih gelap saat interaksi */
+    -fx-cursor: hand;
+}
+
+/* 3. Mengubah Warna Teks Utama di Dalam Combo Box */
+.combo-box .list-cell {
+    -fx-text-fill: #03A6A1;                 /* Warna teks mengikuti warna primary */
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+}
+
+/* 4. Mengubah Tombol Panah (Arrow Button) di Sebelah Kanan */
+.combo-box .arrow-button {
+    -fx-background-color: #03A6A1;          /* Latar tombol panah pakai warna primary */
+    -fx-background-radius: 0 3px 3px 0;     /* Melengkung di sisi kanan saja */
+}
+
+/* 5. Mengubah Warna Segitiga Panah Kecilnya */
+.combo-box .arrow {
+    -fx-background-color: #FFE3BB;          /* Warna panah pakai secondary agar kontras */
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #FFE3BB;
+    -fx-border-color: #03A6A1;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+/* 7. Gaya Baris Pilihan di Dalam List (Normal) */
+.combo-box-popup .list-cell {
+    -fx-background-color: #FFE3BB;
+    -fx-text-fill: #03A6A1;
+    -fx-padding: 8px 12px;
+}
+
+/* 8. Gaya Saat Baris Pilihan Di-hover Sorot Mouse */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #03A6A1;          /* Tukar posisi: latar jadi primary */
+    -fx-text-fill: white;                   /* Teks jadi putih agar terbaca */
+}
+
+/* 9. Gaya Saat Baris Pilihan Sudah Terpilih (Selected) */
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #02827e;          /* Latar primary lebih gelap */
+    -fx-text-fill: #FFE3BB;                 /* Teks kembali ke krem */
+}
+
