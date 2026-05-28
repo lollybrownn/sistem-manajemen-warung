@@ -20,7 +20,7 @@ public class DAOUser implements IDAOUser {
         try (
 
             Connection conn =
-                    (Connection) Connector.connect();
+                    Connector.connect();
 
             PreparedStatement ps =
                     conn.prepareStatement(sql)
@@ -77,7 +77,7 @@ public class DAOUser implements IDAOUser {
         try (
 
             Connection conn =
-                    (Connection) Connector.connect();
+                    Connector.connect();
 
             PreparedStatement ps =
                     conn.prepareStatement(sql);
@@ -130,7 +130,7 @@ public class DAOUser implements IDAOUser {
         try (
 
             Connection conn =
-                    (Connection) Connector.connect();
+                    Connector.connect();
 
             PreparedStatement ps =
                     conn.prepareStatement(sql)
@@ -164,7 +164,7 @@ public class DAOUser implements IDAOUser {
         try (
 
             Connection conn =
-                    (Connection) Connector.connect();
+                    Connector.connect();
 
             PreparedStatement ps =
                     conn.prepareStatement(sql)

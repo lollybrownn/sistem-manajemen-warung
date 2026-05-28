@@ -4,7 +4,6 @@
  */
 package Model;
 
-import com.sun.jdi.connect.spi.Connection;
 import java.sql.*;
 
 /**
@@ -24,7 +23,7 @@ public class Connector {
         try{
             Class.forName(jdbc_driver);
             
-            conn = (Connection) DriverManager.getConnection(url_db, username_db, password_db);
+            conn = DriverManager.getConnection(url_db, username_db, password_db);
             System.out.println("Connection Success");
         } catch(ClassNotFoundException | SQLException e){
             System.out.println("Connection Failed:" + e.getLocalizedMessage());

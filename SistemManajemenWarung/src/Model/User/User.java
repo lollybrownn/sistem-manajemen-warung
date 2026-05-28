@@ -18,7 +18,7 @@ public class User {
             String password,
             String namaLengkap,
             String role,
-            String statusOnline
+            String status
     ) {
 
         this.userId = userId;

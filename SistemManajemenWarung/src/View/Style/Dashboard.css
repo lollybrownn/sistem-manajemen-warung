@@ -1,0 +1,50 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 28, 2026, 11:05:05 AM
+    Author     : ASUS
+*/
+
+
+.sidebar {
+    -fx-background-color:#03A6A1;
+}
+
+.logo {
+    -fx-fill: #FFE3BB;
+}
+
+.logo-active {
+    -fx-fill: #03A6A1;
+}
+
+.button-nonactive {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #FFE3BB;
+}
+
+.button-nonactive:hover {
+    /* Memberikan warna putih/krem super transparan (alpha 0.1) sebagai background */
+    -fx-background-color: rgba(255, 227, 187, 0.1);
+    -fx-cursor:hand;
+}
+
+.button-active {
+    -fx-background-color: #FFE3BB;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #03A6A1;
+}
+
+.dashboard-card {
+    -fx-background-color: #FFE3BB;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
+
+.card-analysis {
+    -fx-background-color: #FFA673;
+    -fx-background-radius:5px;
+}
