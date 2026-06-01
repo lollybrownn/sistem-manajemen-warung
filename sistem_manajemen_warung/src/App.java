@@ -29,7 +29,7 @@ public class App {
                 "1. MySQL server sedang berjalan\n" +
                 "2. Database 'warung_db' sudah dibuat (jalankan sql/warung_db.sql)\n" +
                 "3. Username/password di DBConnection.java sudah benar\n" +
-                "4. File mysql-connector-j-*.jar ada di folder lib/",
+                "4. File mysql-connector-j-*.jar ada di folde=r lib/",
                 "Koneksi Database Gagal",
                 JOptionPane.ERROR_MESSAGE);
             System.exit(1);

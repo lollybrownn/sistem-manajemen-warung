@@ -11,8 +11,8 @@ public class Admin extends User {
         this.noTelp = noTelp; this.email = email;
     }
     @Override public String getDisplayInfo() { return "Administrator: " + getNamaLengkap(); }
-    public String getNoTelp()           { return noTelp; }
-    public void   setNoTelp(String v)   { this.noTelp = v; }
-    public String getEmail()            { return email; }
-    public void   setEmail(String v)    { this.email = v; }
+    public String getNoTelp(){ return noTelp; }
+    public void   setNoTelp(String v){ this.noTelp = v; }
+    public String getEmail(){ return email; }
+    public void   setEmail(String v){ this.email = v; }
 }

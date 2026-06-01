@@ -20,7 +20,7 @@ public class UserController {
         if (nama.isBlank())          return "Nama lengkap tidak boleh kosong!";
         if (dao.isUsernameExists(username)) return "Username sudah digunakan!";
         Kasir k = new Kasir(0, username.trim(), password, nama.trim(), shift);
-        return dao.insert(k) ? "SUCCESS" : "Gagal menyimpan data kasir!";
+        return dao.insert(k) ? "SUCCESS" : "data berhasil disimpan!";
     }
 
     public String updateKasir(int id, String username, String password, String nama, String shift) {

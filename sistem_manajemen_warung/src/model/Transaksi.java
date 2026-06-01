@@ -40,25 +40,46 @@ public class Transaksi {
         return waktu == null ? "-" : waktu.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
-    public int      getId()                       { return id; }
-    public void     setId(int v)                  { this.id=v; }
-    public String   getNomorTransaksi()            { return nomorTransaksi; }
-    public void     setNomorTransaksi(String v)    { this.nomorTransaksi=v; }
-    public LocalDateTime getWaktu()               { return waktu; }
-    public void     setWaktu(LocalDateTime v)      { this.waktu=v; }
-    public User     getKasir()                    { return kasir; }
-    public void     setKasir(User v)              { this.kasir=v; }
-    public List<ItemTransaksi> getItems()          { return items; }
-    public void     setItems(List<ItemTransaksi> v){ this.items=v; hitungTotal(); }
-    public double   getTotalBelanja()              { return totalBelanja; }
-    public void     setTotalBelanja(double v)      { this.totalBelanja=v; }
-    public double   getJumlahBayar()               { return jumlahBayar; }
-    public void     setJumlahBayar(double v)       { this.jumlahBayar=v; }
-    public double   getKembalian()                 { return kembalian; }
-    public void     setKembalian(double v)         { this.kembalian=v; }
-    public Status   getStatus()                   { return status; }
-    public void     setStatus(Status v)            { this.status=v; }
-    public String   getCatatan()                  { return catatan; }
-    public void     setCatatan(String v)           { this.catatan=v; }
-    public int      getJumlahItem()                { return items.size(); }
+    public int getId(){ 
+        return id; }
+    public void setId(int v){ 
+        this.id=v; }
+    public String getNomorTransaksi(){ 
+        return nomorTransaksi; }
+    public void setNomorTransaksi(String v){ 
+        this.nomorTransaksi=v; }
+    public LocalDateTime getWaktu(){ 
+        return waktu; }
+    public void setWaktu(LocalDateTime v){ 
+        this.waktu=v; }
+    public User getKasir(){ 
+        return kasir; }
+    public void setKasir(User v){ 
+        this.kasir=v; }
+    public List<ItemTransaksi> getItems(){ 
+        return items; }
+    public void setItems(List<ItemTransaksi> v){ 
+        this.items=v; hitungTotal(); }
+    public double getTotalBelanja(){ 
+        return totalBelanja; }
+    public void setTotalBelanja(double v){ 
+        this.totalBelanja=v; }
+    public double getJumlahBayar(){ 
+        return jumlahBayar; }
+    public void setJumlahBayar(double v){ 
+        this.jumlahBayar=v; }
+    public double getKembalian(){ 
+        return kembalian; }
+    public void setKembalian(double v){ 
+        this.kembalian=v; }
+    public Status getStatus(){ 
+        return status; }
+    public void setStatus(Status v){ 
+        this.status=v; }
+    public String getCatatan(){ 
+        return catatan; }
+    public void setCatatan(String v){ 
+        this.catatan=v; }
+    public int getJumlahItem(){ 
+        return items.size(); }
 }

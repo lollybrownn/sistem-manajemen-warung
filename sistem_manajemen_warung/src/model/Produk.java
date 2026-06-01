@@ -17,25 +17,46 @@ public class Produk {
     public boolean isStokHabis()  { return stok <= 0; }
     public double  getKeuntungan(){ return hargaJual - hargaBeli; }
 
-    public int    getId()                  { return id; }
-    public void   setId(int v)             { this.id=v; }
-    public String getKode()                { return kode; }
-    public void   setKode(String v)        { this.kode=v; }
-    public String getNama()                { return nama; }
-    public void   setNama(String v)        { this.nama=v; }
-    public String getKategori()            { return kategori; }
-    public void   setKategori(String v)    { this.kategori=v; }
-    public String getSatuan()              { return satuan; }
-    public void   setSatuan(String v)      { this.satuan=v; }
-    public double getHargaBeli()           { return hargaBeli; }
-    public void   setHargaBeli(double v)   { this.hargaBeli=v; }
-    public double getHargaJual()           { return hargaJual; }
-    public void   setHargaJual(double v)   { this.hargaJual=v; }
-    public int    getStok()                { return stok; }
-    public void   setStok(int v)           { this.stok=v; }
-    public int    getStokMinimal()         { return stokMinimal; }
-    public void   setStokMinimal(int v)    { this.stokMinimal=v; }
-    public boolean isAktif()              { return aktif; }
-    public void   setAktif(boolean v)     { this.aktif=v; }
-    @Override public String toString()    { return "[" + kode + "] " + nama; }
+    public int getId(){ 
+        return id; }
+    public void setId(int v){ 
+        this.id=v; }
+    public String getKode(){ 
+        return kode; }
+    public void setKode(String v){ 
+        this.kode=v; }
+    public String getNama(){ 
+        return nama; }
+    public void setNama(String v){ 
+        this.nama=v; }
+    public String getKategori(){ 
+        return kategori; }
+    public void setKategori(String v){ 
+        this.kategori=v; }
+    public String getSatuan(){ 
+        return satuan; }
+    public void setSatuan(String v){ 
+        this.satuan=v; }
+    public double getHargaBeli(){ 
+        return hargaBeli; }
+    public void setHargaBeli(double v){ 
+        this.hargaBeli=v; }
+    public double getHargaJual(){ 
+        return hargaJual; }
+    public void setHargaJual(double v){ 
+        this.hargaJual=v; }
+    public int getStok(){ 
+        return stok; }
+    public void setStok(int v){ 
+        this.stok=v; }
+    public int getStokMinimal(){ 
+        return stokMinimal; }
+    public void setStokMinimal(int v){ 
+        this.stokMinimal=v; }
+    public boolean isAktif(){ 
+        return aktif; }
+    public void setAktif(boolean v){ 
+        this.aktif=v; }
+    @Override public String toString(){ 
+        return "[" + kode + "] " + nama; }
 }

@@ -12,16 +12,28 @@ public class ItemTransaksi {
     }
     public void hitungSubtotal() { this.subtotal = hargaSatuan * jumlah; }
 
-    public int    getId()                  { return id; }
-    public void   setId(int v)             { this.id=v; }
-    public int    getTransaksiId()         { return transaksiId; }
-    public void   setTransaksiId(int v)    { this.transaksiId=v; }
-    public Produk getProduk()              { return produk; }
-    public void   setProduk(Produk v)      { this.produk=v; if(v!=null) hargaSatuan=v.getHargaJual(); hitungSubtotal(); }
-    public int    getJumlah()              { return jumlah; }
-    public void   setJumlah(int v)         { this.jumlah=v; hitungSubtotal(); }
-    public double getHargaSatuan()         { return hargaSatuan; }
-    public void   setHargaSatuan(double v) { this.hargaSatuan=v; hitungSubtotal(); }
-    public double getSubtotal()            { return subtotal; }
-    public void   setSubtotal(double v)    { this.subtotal=v; }
+    public int getId(){ 
+        return id; }
+    public void setId(int v){ 
+        this.id=v; }
+    public int getTransaksiId(){ 
+        return transaksiId; }
+    public void setTransaksiId(int v){ 
+        this.transaksiId=v; }
+    public Produk getProduk(){ 
+        return produk; }
+    public void setProduk(Produk v){ 
+        this.produk=v; if(v!=null) hargaSatuan=v.getHargaJual(); hitungSubtotal(); }
+    public int getJumlah(){ 
+        return jumlah; }
+    public void setJumlah(int v){ 
+        this.jumlah=v; hitungSubtotal(); }
+    public double getHargaSatuan(){ 
+        return hargaSatuan; }
+    public void setHargaSatuan(double v){ 
+        this.hargaSatuan=v; hitungSubtotal(); }
+    public double getSubtotal(){ 
+        return subtotal; }
+    public void setSubtotal(double v){ 
+        this.subtotal=v; }
 }

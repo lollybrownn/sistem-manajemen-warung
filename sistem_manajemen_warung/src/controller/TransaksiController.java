@@ -52,11 +52,15 @@ public class TransaksiController {
         return trx.getId() > 0 ? trxDao.update(trx) : true;
     }
 
-    public List<Transaksi> getAllTransaksi()         { return trxDao.findAll(); }
-    public List<Transaksi> getTransaksiHariIni()     { return trxDao.findByTanggal(LocalDate.now()); }
-    public double getPendapatanHariIni()             { LocalDate t=LocalDate.now(); return trxDao.getTotalPendapatan(t,t); }
-    public int    getJumlahTrxHariIni()              { return trxDao.countSelesaiByTanggal(LocalDate.now()); }
-    public double getTotalPendapatanAll() {
+    public List<Transaksi> getAllTransaksi(){ 
+        return trxDao.findAll(); }
+    public List<Transaksi> getTransaksiHariIni(){ 
+        return trxDao.findByTanggal(LocalDate.now()); }
+    public double getPendapatanHariIni(){ 
+        LocalDate t=LocalDate.now(); return trxDao.getTotalPendapatan(t,t); }
+    public int    getJumlahTrxHariIni(){ 
+        return trxDao.countSelesaiByTanggal(LocalDate.now()); }
+    public double getTotalPendapatanAll(){
         return trxDao.findAll().stream()
             .filter(t -> t.getStatus()==Transaksi.Status.SELESAI)
             .mapToDouble(Transaksi::getTotalBelanja).sum();

@@ -10,6 +10,8 @@ public class Kasir extends User {
         this.shift = (shift == null || shift.isEmpty()) ? "PAGI" : shift;
     }
     @Override public String getDisplayInfo() { return "Kasir: " + getNamaLengkap() + " | Shift: " + shift; }
-    public String getShift()       { return shift; }
-    public void   setShift(String v){ this.shift = v; }
+    public String getShift() { 
+        return shift; }
+    public void setShift(String v){ 
+        this.shift = v; }
 }

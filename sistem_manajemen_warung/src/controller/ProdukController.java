@@ -8,13 +8,20 @@ import java.util.List;
 public class ProdukController {
     private final IProdukDao dao = DaoFactory.getProdukDao();
 
-    public List<Produk> getAllProduk()           { return dao.findAll(); }
-    public List<Produk> getProdukAktif()         { return dao.findAllActive(); }
-    public Produk       getProdukById(int id)    { return dao.findById(id).orElse(null); }
-    public Produk       getProdukByKode(String k){ return dao.findByKode(k).orElse(null); }
-    public List<Produk> cariProduk(String kw)    { return dao.findByKeyword(kw); }
-    public List<Produk> getProdukStokRendah()    { return dao.findStokRendah(); }
-    public List<String> getKategoriList()        { return dao.findAllKategori(); }
+    public List<Produk> getAllProduk(){ 
+        return dao.findAll(); }
+    public List<Produk> getProdukAktif(){ 
+        return dao.findAllActive(); }
+    public Produk       getProdukById(int id){ 
+        return dao.findById(id).orElse(null); }
+    public Produk       getProdukByKode(String k){ 
+        return dao.findByKode(k).orElse(null); }
+    public List<Produk> cariProduk(String kw){ 
+        return dao.findByKeyword(kw); }
+    public List<Produk> getProdukStokRendah(){ 
+        return dao.findStokRendah(); }
+    public List<String> getKategoriList(){ 
+        return dao.findAllKategori(); }
 
     public String tambahProduk(String kode, String nama, String kat,
                                 double hBeli, double hJual, int stok, String satuan) {
