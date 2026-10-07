@@ -1,191 +1,236 @@
-# sistem-manajemen-warung
+# 🏪 Warung Management System
 
-# 🏪 Sistem Manajemen Warung
+A desktop-based **Point of Sale (POS) and store management application** built with **Java Swing** and **MySQL**.
 
-Aplikasi desktop **Point of Sale (POS) dan manajemen warung** yang dibangun menggunakan **Java Swing** dan **MySQL**. Aplikasi ini membantu proses pengelolaan produk, transaksi penjualan, akun kasir, monitoring stok, serta laporan penjualan dalam satu sistem.
+This application is designed to help small businesses manage products, sales transactions, cashier accounts, inventory, and sales reports in one integrated system.
 
-Project ini menggunakan pendekatan **MVC (Model-View-Controller)** dan **DAO (Data Access Object)** untuk memisahkan tampilan, logika aplikasi, dan akses database.
+The project follows the **MVC (Model-View-Controller)** architecture combined with the **DAO (Data Access Object)** pattern to separate the user interface, business logic, and database operations.
 
-## ✨ Fitur Utama
+---
+
+## ✨ Features
 
 ### 🔐 Authentication & Role Management
-- Login menggunakan username dan password
-- Mendukung dua role pengguna:
+
+- Login using username and password
+- Supports two user roles:
   - **Admin**
-  - **Kasir**
-- Tampilan dan akses menu berbeda berdasarkan role pengguna
-- Validasi akun aktif sebelum pengguna dapat masuk
+  - **Cashier**
+- Different menus and access permissions based on the user's role
+- Account validation before allowing access to the application
 
-### 📊 Dashboard Admin
-Admin dapat melihat ringkasan kondisi warung secara langsung, seperti:
+---
 
-- Total produk aktif
-- Jumlah transaksi hari ini
-- Pendapatan hari ini
-- Jumlah produk dengan stok rendah
-- Peringatan produk yang perlu segera direstok
+### 📊 Admin Dashboard
 
-### 📦 Manajemen Produk
-Admin dapat melakukan pengelolaan data produk:
+The Admin dashboard provides an overview of the store's current activity, including:
 
-- Menambahkan produk
-- Mengubah produk
-- Menghapus/nonaktifkan produk
-- Mencari produk berdasarkan nama atau kode
-- Mengatur kategori produk
-- Mengatur harga beli dan harga jual
-- Mengatur jumlah stok
-- Mengatur satuan produk
-- Monitoring produk dengan stok rendah atau habis
+- Total active products
+- Number of today's transactions
+- Today's revenue
+- Number of low-stock products
+- Stock alerts for products that need restocking
 
-### 👨‍💼 Manajemen Kasir
-Admin dapat mengelola akun kasir melalui sistem:
+---
 
-- Menambahkan akun kasir
-- Mengubah data kasir
-- Mengatur shift:
-  - Pagi
-  - Sore
-  - Malam
-- Menonaktifkan akun kasir
-- Melihat status akun kasir
+### 📦 Product Management
 
-### 🛒 Point of Sale (POS)
-Kasir dapat melakukan transaksi penjualan melalui halaman POS.
+Admins can manage product information through the application.
 
-Fitur POS meliputi:
+Available features include:
 
-- Pencarian produk berdasarkan nama atau kode
-- Menambahkan produk ke keranjang
-- Menentukan jumlah barang
-- Menampilkan harga dan stok produk
-- Menghapus produk dari keranjang
-- Perhitungan subtotal dan total otomatis
-- Input jumlah pembayaran
-- Perhitungan kembalian otomatis
-- Shortcut nominal pembayaran
-- Membatalkan transaksi
-- Membuat transaksi baru
-- Menampilkan struk setelah pembayaran berhasil
+- Add new products
+- Edit product information
+- Delete or deactivate products
+- Search products by name or product code
+- Manage product categories
+- Manage purchase prices
+- Manage selling prices
+- Manage inventory stock
+- Manage product units
+- Monitor low-stock and out-of-stock products
 
-### 🧾 Riwayat Transaksi
-Sistem menyimpan seluruh transaksi yang dilakukan.
+---
 
-Informasi yang tersedia:
+### 👨‍💼 Cashier Management
 
-- Nomor transaksi
-- Tanggal dan waktu transaksi
-- Nama kasir
-- Jumlah item
-- Total transaksi
-- Jumlah pembayaran
-- Kembalian
-- Status transaksi
+Admins can manage cashier accounts directly from the application.
 
-Detail masing-masing transaksi juga dapat dilihat dengan melakukan **double-click** pada transaksi yang dipilih.
+Features include:
 
-### 📈 Laporan & Statistik
-Admin dapat melihat statistik penjualan melalui beberapa laporan:
+- Add cashier accounts
+- Edit cashier information
+- Assign cashier shifts:
+  - Morning
+  - Afternoon
+  - Night
+- Deactivate cashier accounts
+- View cashier account status
 
-- Ringkasan transaksi hari ini
-- Pendapatan hari ini
-- Transaksi tujuh hari terakhir
-- Pendapatan tujuh hari terakhir
-- Total seluruh transaksi
-- Total pendapatan
-- Jumlah produk aktif
-- Jumlah kasir
-- Daftar produk terlaris
-- Monitoring produk dengan stok rendah
+---
+
+### 🛒 Point of Sale
+
+Cashiers can process customer purchases through the POS interface.
+
+POS features include:
+
+- Search products by name or product code
+- Add products to the shopping cart
+- Set product quantity
+- Display product price and available stock
+- Remove products from the cart
+- Automatic subtotal calculation
+- Automatic total calculation
+- Enter customer payment amount
+- Automatic change calculation
+- Quick payment amount shortcuts
+- Cancel transactions
+- Start a new transaction
+- Display receipt after successful payment
+
+---
+
+### 🧾 Transaction History
+
+The system stores all completed sales transactions.
+
+Transaction information includes:
+
+- Transaction number
+- Transaction date and time
+- Cashier name
+- Total items
+- Transaction total
+- Customer payment
+- Change amount
+- Transaction status
+
+Users can also view the detailed contents of each transaction.
+
+---
+
+### 📈 Reports & Statistics
+
+Admins can monitor business performance through several reports and statistics.
+
+Available information includes:
+
+- Today's total transactions
+- Today's revenue
+- Transactions from the last 7 days
+- Revenue from the last 7 days
+- Total transactions
+- Total revenue
+- Total active products
+- Total cashiers
+- Best-selling products
+- Low-stock products
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Teknologi | Kegunaan |
+| Technology | Purpose |
 |---|---|
-| Java | Bahasa pemrograman utama |
-| Java Swing | Desktop GUI |
-| MySQL | Database |
-| JDBC | Koneksi Java dengan MySQL |
-| MySQL Connector/J | JDBC Driver |
+| Java | Main programming language |
+| Java Swing | Desktop graphical user interface |
+| MySQL | Relational database |
+| JDBC | Database connectivity |
+| MySQL Connector/J | MySQL JDBC driver |
 | Apache Ant | Build system |
-| NetBeans | IDE/project configuration |
-
-Project saat ini dikonfigurasi menggunakan **Java 25**.
+| Apache NetBeans | IDE and project configuration |
 
 ---
 
-## 🏗️ Arsitektur
+## 🏗️ Architecture
 
-Project menggunakan kombinasi **MVC + DAO**.
+This project follows the **MVC + DAO** architecture.
 
 ```text
-Model
-   ↓
-Controller
-   ↓
-DAO
-   ↓
-MySQL Database
-
-View ← Controller → Model
+              ┌───────────────┐
+              │     View      │
+              │  Java Swing   │
+              └───────┬───────┘
+                      │
+                      ▼
+              ┌───────────────┐
+              │  Controller   │
+              │ Business Logic│
+              └───────┬───────┘
+                      │
+                      ▼
+              ┌───────────────┐
+              │      DAO      │
+              │ Database Layer│
+              └───────┬───────┘
+                      │
+                      ▼
+              ┌───────────────┐
+              │     MySQL     │
+              └───────────────┘
 ```
 
-### MVC
+### Model
 
-**Model**
+The Model layer represents the application's main data entities.
 
-Berisi representasi data dan business entity seperti:
+Examples:
 
 ```text
 User
 Admin
-Kasir
-Produk
-Transaksi
-ItemTransaksi
+Cashier
+Product
+Transaction
+TransactionItem
 ```
 
-**View**
+---
 
-Menangani tampilan aplikasi menggunakan Java Swing.
+### View
 
-Contoh:
+The View layer handles the application's graphical user interface using Java Swing.
+
+Examples:
 
 ```text
 LoginFrame
 AdminFrame
-KasirFrame
+CashierFrame
 POSPanel
-ProdukPanel
-KasirPanel
-HistoriPanel
-LaporanPanel
+ProductPanel
+CashierPanel
+HistoryPanel
+ReportPanel
 ```
 
-**Controller**
+---
 
-Menangani business logic dan komunikasi antara View dan DAO.
+### Controller
 
-Contoh:
+The Controller layer handles application logic and communication between the View and DAO layers.
+
+Examples:
 
 ```text
 AuthController
 UserController
-ProdukController
-TransaksiController
+ProductController
+TransactionController
 ```
-
-### DAO
-
-DAO digunakan untuk memisahkan proses akses database dari business logic aplikasi.
-
-Database diakses menggunakan **JDBC dan MySQL Connector/J**.
 
 ---
 
-## 📁 Struktur Project
+### DAO
+
+The **Data Access Object** layer is responsible for handling database operations.
+
+This approach keeps SQL and database access logic separate from the application's business logic.
+
+---
+
+## 📁 Project Structure
 
 ```text
 sistem-manajemen-warung/
@@ -215,22 +260,22 @@ sistem-manajemen-warung/
 
 ## 🗄️ Database
 
-Database yang digunakan adalah:
+The application uses a MySQL database named:
 
 ```text
 warung_db
 ```
 
-Database terdiri dari beberapa tabel utama:
+The main tables include:
 
-| Tabel | Deskripsi |
+| Table | Description |
 |---|---|
-| `users` | Menyimpan akun Admin dan Kasir |
-| `produk` | Menyimpan informasi produk dan stok |
-| `transaksi` | Menyimpan transaksi penjualan |
-| `item_transaksi` | Menyimpan detail produk pada setiap transaksi |
+| `users` | Stores Admin and Cashier accounts |
+| `produk` | Stores product and inventory information |
+| `transaksi` | Stores sales transactions |
+| `item_transaksi` | Stores items associated with each transaction |
 
-Relasi sederhananya:
+The simplified relationship between tables is:
 
 ```text
 users
@@ -244,55 +289,71 @@ users
 
 ---
 
-## 🚀 Instalasi dan Menjalankan Project
+## 🚀 Getting Started
 
-### 1. Clone Repository
+### Prerequisites
+
+Before running the application, make sure you have installed:
+
+- Java Development Kit
+- Apache NetBeans
+- MySQL Server
+- MySQL Connector/J
+
+---
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/lollybrownn/sistem-manajemen-warung.git
+```
+
+Move into the project directory:
+
+```bash
 cd sistem-manajemen-warung
 ```
 
-### 2. Setup Database
+---
 
-Pastikan **MySQL Server** sudah berjalan.
+### 2. Set Up the Database
 
-Import file:
+Make sure your MySQL server is running.
+
+Import the SQL file located at:
 
 ```text
 sql/warung_db.sql
 ```
 
-Menggunakan MySQL CLI:
+Using MySQL CLI:
 
 ```bash
 mysql -u root -p < sql/warung_db.sql
 ```
 
-Atau import file tersebut menggunakan:
+Alternatively, you can import the SQL file using:
 
 - MySQL Workbench
 - phpMyAdmin
 - HeidiSQL
-- Database management tool lainnya
+- Another MySQL database management tool
 
-Script akan membuat database:
+The SQL script will create the required database and tables.
 
-```text
-warung_db
-```
+---
 
-beserta tabel dan data awal yang dibutuhkan aplikasi.
+### 3. Configure the Database Connection
 
-### 3. Konfigurasi Database
-
-Buka:
+Open:
 
 ```text
 sistem_manajemen_warung/src/database/DBConnection.java
 ```
 
-Sesuaikan konfigurasi MySQL:
+Update the database configuration according to your local MySQL environment.
+
+Example:
 
 ```java
 private static final String DB_HOST = "localhost";
@@ -302,13 +363,15 @@ private static final String DB_USER = "root";
 private static final String DB_PASS = "";
 ```
 
-Sesuaikan `DB_USER` dan `DB_PASS` dengan konfigurasi MySQL pada komputer.
+Change `DB_USER` and `DB_PASS` if your MySQL credentials are different.
 
-### 4. Tambahkan MySQL Connector/J
+---
 
-Project membutuhkan **MySQL Connector/J** sebagai JDBC driver.
+### 4. Add MySQL Connector/J
 
-Jika NetBeans menampilkan **broken reference**, tambahkan file MySQL Connector/J melalui:
+The application requires **MySQL Connector/J** to connect Java with the MySQL database.
+
+If NetBeans displays a broken library reference:
 
 ```text
 Project
@@ -317,51 +380,51 @@ Project
 → Add JAR/Folder
 ```
 
-Kemudian pilih file:
+Then select your MySQL Connector/J `.jar` file.
+
+Example:
 
 ```text
-mysql-connector-j-*.jar
+mysql-connector-j-9.x.x.jar
 ```
 
-Project saat ini sebelumnya dikonfigurasi menggunakan:
+---
 
-```text
-mysql-connector-j-9.7.0.jar
-```
+### 5. Open the Project
 
-### 5. Buka Project
-
-Buka folder berikut menggunakan Apache NetBeans:
+Open the following folder using Apache NetBeans:
 
 ```text
 sistem_manajemen_warung/
 ```
 
-Pastikan JDK sudah terkonfigurasi dengan benar.
+Make sure your Java Development Kit is configured correctly.
 
-### 6. Jalankan Aplikasi
+---
 
-Jalankan:
+### 6. Run the Application
+
+Run:
 
 ```text
 App.java
 ```
 
-atau gunakan:
+Or use:
 
 ```text
 Run Project
 ```
 
-dari NetBeans.
+from Apache NetBeans.
 
-Saat aplikasi dijalankan, sistem akan memeriksa koneksi MySQL terlebih dahulu sebelum membuka halaman login.
+The application will check the MySQL connection before opening the login page.
 
 ---
 
-## 🔑 Default Account
+## 🔑 Demo Accounts
 
-Database menyediakan beberapa akun awal untuk keperluan development/demo.
+The database includes several default accounts for testing and demonstration purposes.
 
 ### Admin
 
@@ -371,27 +434,27 @@ Password : admin123
 Role     : ADMIN
 ```
 
-### Kasir 1
+### Cashier 1
 
 ```text
 Username : kasir1
 Password : kasir123
-Shift    : PAGI
+Shift    : MORNING
 ```
 
-### Kasir 2
+### Cashier 2
 
 ```text
 Username : kasir2
 Password : kasir123
-Shift    : SORE
+Shift    : AFTERNOON
 ```
 
-> Akun di atas ditujukan untuk development/demo. Jangan gunakan credential default pada aplikasi production.
+> These accounts are intended for development and demonstration purposes only. Default credentials should not be used in production environments.
 
 ---
 
-## 🔄 Alur Aplikasi
+## 🔄 Application Flow
 
 ```text
                 ┌───────────────┐
@@ -399,60 +462,96 @@ Shift    : SORE
                 └───────┬───────┘
                         │
                 ┌───────▼───────┐
-                │ Role Checking │
+                │  Role Check   │
                 └───────┬───────┘
                         │
               ┌─────────┴─────────┐
               │                   │
-        ┌─────▼─────┐       ┌────▼─────┐
-        │   ADMIN   │       │  KASIR   │
-        └─────┬─────┘       └────┬─────┘
+        ┌─────▼─────┐       ┌────▼──────┐
+        │   ADMIN   │       │  CASHIER  │
+        └─────┬─────┘       └────┬──────┘
               │                   │
-       ┌──────┼───────┐      ┌───┼─────────┐
-       │      │       │      │   │         │
-   Dashboard Produk  Kasir   POS Histori  Produk
-       │      │       │      │
-       │    Histori    │   Transaksi
-       │      │        │      │
-       └── Laporan ────┘   Pembayaran
+     ┌────────┼────────┐     ┌────┼─────────┐
+     │        │        │     │    │         │
+ Dashboard Products Cashiers POS History Products
+     │        │        │     │
+     │      History    │  Transaction
+     │        │        │     │
+     └──── Reports ────┘   Payment
                               │
-                            Struk
+                           Receipt
 ```
 
 ---
 
-## 🎯 Tujuan Project
+## 🎯 Project Objectives
 
-Project ini dikembangkan untuk mempelajari sekaligus mengimplementasikan beberapa konsep pengembangan perangkat lunak, antara lain:
+This project was developed as a learning project to practice and implement several software engineering concepts, including:
 
-- Object-Oriented Programming (OOP)
+- Object-Oriented Programming
 - Java Desktop Development
-- Java Swing GUI
+- Java Swing
 - JDBC
-- Relational Database
+- Relational Databases
 - CRUD Operations
-- Authentication & Authorization
-- Role-Based Access
+- Authentication
+- Role-Based Authorization
 - MVC Architecture
 - DAO Pattern
 - Transaction Management
+- Inventory Management
 
 ---
 
-## 🔮 Pengembangan Selanjutnya
+## 🔮 Future Improvements
 
-Beberapa fitur yang dapat dikembangkan pada versi berikutnya:
+Potential improvements for future versions include:
 
 - Password hashing
-- Export laporan ke PDF / Excel
-- Grafik penjualan
-- Filter laporan berdasarkan tanggal
-- Cetak struk menggunakan thermal printer
-- Barcode scanner
-- Backup & restore database
-- Dashboard analitik yang lebih lengkap
-- Configuration file untuk database
+- Export reports to PDF or Excel
+- Sales charts and visual analytics
+- Date-based report filtering
+- Thermal receipt printer integration
+- Barcode scanner support
+- Database backup and restore
+- Advanced analytics dashboard
+- External database configuration file
 - Unit testing
+- Better exception handling
+- Input validation improvements
+
+---
+
+## 📸 Screenshots
+
+Screenshots of the application will be added here.
+
+Recommended screenshots:
+
+```text
+Login Page
+Admin Dashboard
+Product Management
+Point of Sale
+Transaction History
+Sales Report
+```
+
+Example:
+
+```markdown
+### Login
+
+![Login](screenshots/login.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/dashboard.png)
+
+### Point of Sale
+
+![POS](screenshots/pos.png)
+```
 
 ---
 
@@ -469,6 +568,6 @@ GitHub: [@lollybrownn](https://github.com/lollybrownn)
 
 ## 📄 License
 
-Project ini dibuat untuk tujuan **pembelajaran dan pengembangan portfolio**.
+This project was created for **learning and portfolio purposes**.
 
-Feel free to fork, study, and develop this project further.
+Feel free to explore, fork, and improve the project.
